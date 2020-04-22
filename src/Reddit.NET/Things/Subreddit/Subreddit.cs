@@ -132,6 +132,7 @@ namespace Reddit.Things
         public string SuggestedCommentSort { get; set; }
 
         [JsonProperty("active_user_count")]
+        [JsonConverter(typeof(Reddit.IntWorkaround))]
         public int? ActiveUserCount { get; set; }
 
         [JsonProperty("icon_img")]
@@ -156,6 +157,7 @@ namespace Reddit.Things
         public string UserFlairTextColor { get; set; }
 
         [JsonProperty("accounts_active")]
+        [JsonConverter(typeof(Reddit.IntWorkaround))]
         public int? AccountsActive { get; set; }
 
         [JsonProperty("public_traffic")]
